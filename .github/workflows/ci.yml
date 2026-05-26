@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [main]
 
+# Opt into Node.js 24 for all GitHub-hosted action runners now,
+# ahead of the mandatory upgrade on 2026-06-02.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   backend:
     name: Backend tests
